@@ -1,0 +1,1 @@
+export const apiURL ="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/products.json"
