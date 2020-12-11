@@ -1,7 +1,8 @@
 import * as Constants from '../../Constants';
 import getShopItemList from '../actions/ShopListItems';
 
-const getShopItemListThunk = async () => dispatch =>{
+async function getShopItemListThunk(){
+    return function(dispatch){
 
     let response = await fetch(Constants.apiURL);
 
@@ -9,6 +10,7 @@ const getShopItemListThunk = async () => dispatch =>{
 
     dispatch(getShopItemList(response.json()))
 
+}
 }
 
 export default getShopItemListThunk;

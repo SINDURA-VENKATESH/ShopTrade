@@ -1,9 +1,13 @@
-const shopListItemReducer = (state, action) =>{
+const initialState={
+    shopItems:[]
+}
+
+const shopListItemReducer = (state=initialState, action) =>{
     switch(action.type){
         case "GET_SHOP_ITEM_LIST":
             return{
                 ...state,
-                action.payload,
+                shopItems: action.shopItems,
             };
         default:
             return state

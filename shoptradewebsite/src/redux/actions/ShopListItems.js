@@ -1,7 +1,7 @@
-const getShopItemList = (data) =>{
+const getShopItemList = (shopItems) =>{
     return {
         type:"GET_SHOP_ITEM_LIST",
-        payload: data
+        shopItems
     }
 }
 
